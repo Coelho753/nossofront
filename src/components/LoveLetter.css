@@ -1,0 +1,27 @@
+.love-postit {
+  width: 260px;
+  min-height: 200px;
+  background: #fff8a6;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.love-postit:hover {
+  transform: translateY(-4px) rotate(1deg);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+}
+
+.love-postit h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.love-postit p {
+  font-size: 16px;
+  line-height: 1.5;
+}
