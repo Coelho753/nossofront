@@ -89,9 +89,16 @@ export default function App() {
         title="Coisas que amo em você"
         animated={true}
         content={[
-          "Seu sorriso.",
-          "Seu carinho.",
-          "Seu jeito único."
+          "1  Odeio não sentir seu bafinho de manhã",
+          "2 Odeio brigar contigo",
+          "3 Odeio não poder acordar com você",
+          "4 Odeio não conseguir demonstrar metade do que sinto",
+          "5 Odeio não poder te beijar todos os dias",
+          "6 Odeio sentir seu cheiro nas minhas roupas e não sentir você nos meus braços",
+          "7 Odeio como você é gostosa e todo mundo pode te ver",
+          "8 Odeio quando sonho contigo e você não tá lá de verdade",
+          "9 Odeio acordar abraçando o travesseiro e não ser você de conchinha",
+          "10 Odeio ficar sem você"
         ]}
       />
 
