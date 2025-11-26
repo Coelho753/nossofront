@@ -1,30 +1,10 @@
-// App.jsx — versão estática
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import PostItSection from "./components/PostItSection";
 import Gallery from "./components/Gallery";
-import LoveLetter from "./components/LoveLetter";
 
 export default function App() {
-  const [photos, setPhotos] = useState([]);
   const [timerText, setTimerText] = useState("");
-
-  useEffect(() => {
-    async function load() {
-      try {
-        const res = await fetch("/photos.json", { cache: "no-store" });
-        if (!res.ok) {
-          console.warn("photos.json não encontrado:", res.status);
-          return;
-        }
-        const data = await res.json();
-        setPhotos(Array.isArray(data) ? data : []);
-      } catch (err) {
-        console.error("Erro ao carregar photos.json:", err);
-      }
-    }
-    load();
-  }, []);
 
   // Cronômetro
   useEffect(() => {
@@ -51,10 +31,30 @@ export default function App() {
 
       setTimerText(`${years} anos • ${months} meses • ${days} dias • ${hours}h • ${minutes}m • ${seconds}s`);
     }
+
     updateTimer();
     const iv = setInterval(updateTimer, 1000);
     return () => clearInterval(iv);
   }, []);
+
+  useEffect(() => {
+  const els = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    const trigger = window.innerHeight * 0.88;
+
+    els.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < trigger) el.classList.add("visible");
+    });
+  }
+
+  revealOnScroll();
+  window.addEventListener("scroll", revealOnScroll);
+
+  return () => window.removeEventListener("scroll", revealOnScroll);
+ }, []);
+
 
   return (
     <div className="container">
@@ -68,9 +68,9 @@ export default function App() {
       </section>
 
       <section className="circles-container">
-        <div className="circle"><img src="/img/foto1.jpg" alt="1"/></div>
-        <div className="circle"><img src="/img/foto2.jpg" alt="2"/></div>
-        <div className="circle"><img src="/img/foto3.jpg" alt="3"/></div>
+        <div className="circle"><img src="/img/foto1.jpg" alt="1" /></div>
+        <div className="circle"><img src="/img/foto2.jpg" alt="2" /></div>
+        <div className="circle"><img src="/img/foto3.jpg" alt="3" /></div>
       </section>
 
       <PostItSection
@@ -94,10 +94,8 @@ export default function App() {
         ]}
       />
 
-      {/* Galeria estática */}
-      <Gallery photos={photos} />
+      <Gallery />
 
-      <LoveLetter />
     </div>
   );
 }
