@@ -63,6 +63,7 @@ export default function App() {
       <section id="timer" className="hero">
         <div className="postit main-postit">
           <h1 className="title">GUSTAVO & ANA JÚLIA</h1>
+          <h2>Juntos há:</h2>
           <div className="timer-box">{timerText}</div>
         </div>
       </section>
