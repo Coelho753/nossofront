@@ -86,7 +86,7 @@ export default function App() {
 
       <PostItSection
         id="amo"
-        title="Coisas que amo em você"
+        title="Coisas que Odeio em você"
         animated={true}
         content={[
           "1  Odeio não sentir seu bafinho de manhã",
