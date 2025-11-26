@@ -79,8 +79,30 @@ export default function App() {
         title="História"
         animated={true}
         content={[
-          "Nosso começo foi inesperado.",
-          "A cada dia tudo fica mais especial."
+          "Tudo começou no dia em que vi você naquele story", 
+          "e não consegui tirar você da minha cabeça", 
+          "eu queria saber mais sobre você, queria ser seu", 
+          "e com o tempo tomei vergonha na cara e fui te chamar no Insta", 
+          "foram muitas tentativas de te conquistar", 
+          "até você comentar sobre meu dedo quebrado e tudo mudar", 
+          "as conversas que eram só papo furado", 
+          "viraram noites até mais tarde com papos", 
+          "sobre a vida e cada risada na mensagem", 
+          "era um sorriso sincero na vida real", 
+          "e em uma fagulha de esperança", 
+          "fiz aquela aposta",
+          "e fiquei com mais esperança quando você aceitou", 
+          "e se eu tinha alguma dúvida sobre o que a gente tinha",
+          "no momento em que você disse olhando no meu olho",
+          "que não queria que eu fosse um filho da puta", 
+          "eu tive certeza que eu queria você pra mim", 
+          "e queria ser seu mais que tudo naquele momento.",
+          "E hoje depois de mais de um ano",
+          "com você sendo minha oficialmente pra todo mundo", 
+          "tenho certeza que minha vida sem você não existe", 
+          "você já é parte da minha família, parte de mim", 
+
+          "Eu te amo minha Princesa"
         ]}
       />
 
@@ -89,16 +111,16 @@ export default function App() {
         title="Coisas que Odeio em você"
         animated={true}
         content={[
-          "1  Odeio não sentir seu bafinho de manhã",
-          "2 Odeio brigar contigo",
-          "3 Odeio não poder acordar com você",
-          "4 Odeio não conseguir demonstrar metade do que sinto",
-          "5 Odeio não poder te beijar todos os dias",
-          "6 Odeio sentir seu cheiro nas minhas roupas e não sentir você nos meus braços",
-          "7 Odeio como você é gostosa e todo mundo pode te ver",
-          "8 Odeio quando sonho contigo e você não tá lá de verdade",
-          "9 Odeio acordar abraçando o travesseiro e não ser você de conchinha",
-          "10 Odeio ficar sem você"
+          "1  Odeio não sentir seu bafinho de manhã.",
+          "2 Odeio brigar contigo.",
+          "3 Odeio não poder acordar com você.",
+          "4 Odeio não conseguir demonstrar metade do que sinto.",
+          "5 Odeio não poder te beijar todos os dias.",
+          "6 Odeio sentir seu cheiro nas minhas roupas e não sentir você nos meus braços.",
+          "7 Odeio como você é gostosa e todo mundo pode te ver.",
+          "8 Odeio quando sonho contigo e você não tá lá de verdade.",
+          "9 Odeio acordar abraçando o travesseiro e não ser você de conchinha.",
+          "10 Odeio ficar sem você."
         ]}
       />
 

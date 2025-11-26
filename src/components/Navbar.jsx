@@ -7,7 +7,7 @@ export default function Navbar(){
       <div className="menu">
         <a href="#timer" className="navlink">Início</a>
         <a href="#historia" className="navlink">História</a>
-        <a href="#amo" className="navlink">Coisas que Odeio em você</a>
+        <a href="#amo" className="navlink">Coisas que Odeio em Vc</a>
         <a href="#galeria" className="navlink">Galeria</a>
       </div>
     </nav>
