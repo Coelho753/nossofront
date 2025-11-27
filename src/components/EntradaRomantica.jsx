@@ -14,11 +14,11 @@ export default function EntradaRomantica({ onConfirm }) {
   return (
     <div className="entrada-container">
       <div className="entrada-box">
-        <h2>Você me ama? ❤️</h2>
+        <h2>Promete ficar comigo para sempre? ❤️</h2>
 
         <div className="btn-area">
           <button className="btn-sim" onClick={onConfirm}>
-            SIM
+            Prometo
           </button>
 
           <button
