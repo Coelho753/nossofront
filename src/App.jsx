@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import PostItSection from "./components/PostItSection";
 import Gallery from "./components/Gallery";
+import EntradaRomantica from "./components/EntradaRomantica";
 
 export default function App() {
+  const [entrou, setEntrou] = useState(false);
   const [timerText, setTimerText] = useState("");
 
   // Cronômetro
@@ -37,25 +39,30 @@ export default function App() {
     return () => clearInterval(iv);
   }, []);
 
+  // Scroll reveal
   useEffect(() => {
-  const els = document.querySelectorAll(".reveal");
+    const els = document.querySelectorAll(".reveal");
 
-  function revealOnScroll() {
-    const trigger = window.innerHeight * 0.88;
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.88;
 
-    els.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < trigger) el.classList.add("visible");
-    });
+      els.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) el.classList.add("visible");
+      });
+    }
+
+    revealOnScroll();
+    window.addEventListener("scroll", revealOnScroll);
+    return () => window.removeEventListener("scroll", revealOnScroll);
+  }, []);
+
+  // -------- TELA INICIAL ROMÂNTICA --------
+  if (!entrou) {
+    return <EntradaRomantica onConfirm={() => setEntrou(true)} />;
   }
 
-  revealOnScroll();
-  window.addEventListener("scroll", revealOnScroll);
-
-  return () => window.removeEventListener("scroll", revealOnScroll);
- }, []);
-
-
+  // -------- CONTEÚDO PRINCIPAL --------
   return (
     <div className="container">
       <Navbar />
@@ -69,8 +76,8 @@ export default function App() {
       </section>
 
       <section className="circles-container">
-        <div className="circle"><img src="/img/foto1.jpg" alt="1" /></div>
-        <div className="circle"><img src="/img/foto2.jpg" alt="2" /></div>
+        <div className="circle"><img src="/img/foto4.jpg" alt="1" /></div>
+        <div className="circle"><img src="/img/foto8.jpg" alt="2" /></div>
         <div className="circle"><img src="/img/foto3.jpg" alt="3" /></div>
       </section>
 
@@ -79,36 +86,35 @@ export default function App() {
         title="História"
         animated={true}
         content={[
-          "Tudo começou no dia em que vi você naquele story", 
-          "e não consegui tirar você da minha cabeça", 
-          "eu queria saber mais sobre você, queria ser seu", 
-          "e com o tempo tomei vergonha na cara e fui te chamar no Insta", 
-          "foram muitas tentativas de te conquistar", 
-          "até você comentar sobre meu dedo quebrado e tudo mudar", 
-          "as conversas que eram só papo furado", 
-          "viraram noites até mais tarde com papos", 
-          "sobre a vida e cada risada na mensagem", 
-          "era um sorriso sincero na vida real", 
-          "e em uma fagulha de esperança", 
+          "Tudo começou no dia em que vi você naquele story",
+          "e não consegui tirar você da minha cabeça",
+          "eu queria saber mais sobre você, queria ser seu",
+          "e com o tempo tomei vergonha na cara e fui te chamar no Insta",
+          "foram muitas tentativas de te conquistar",
+          "até você comentar sobre meu dedo quebrado e tudo mudar",
+          "as conversas que eram só papo furado",
+          "viraram noites até mais tarde com papos",
+          "sobre a vida e cada risada na mensagem",
+          "era um sorriso sincero na vida real",
+          "e em uma fagulha de esperança",
           "fiz aquela aposta",
-          "e fiquei com mais esperança quando você aceitou", 
+          "e fiquei com mais esperança quando você aceitou",
           "e se eu tinha alguma dúvida sobre o que a gente tinha",
           "no momento em que você disse olhando no meu olho",
-          "que não queria que eu fosse um filho da puta", 
-          "eu tive certeza que eu queria você pra mim", 
+          "que não queria que eu fosse um filho da puta",
+          "eu tive certeza que eu queria você pra mim",
           "e queria ser seu mais que tudo naquele momento.",
           "E hoje depois de mais de um ano",
-          "com você sendo minha oficialmente pra todo mundo", 
-          "tenho certeza que minha vida sem você não existe", 
-          "você já é parte da minha família, parte de mim", 
-
+          "com você sendo minha oficialmente pra todo mundo",
+          "tenho certeza que minha vida sem você não existe",
+          "você já é parte da minha família, parte de mim",
           "Eu te amo minha Princesa"
         ]}
       />
 
       <PostItSection
         id="amo"
-        title="Coisas que Odeio em você"
+        title="10 Coisas que Odeio em você"
         animated={true}
         content={[
           "1  Odeio não sentir seu bafinho de manhã.",
@@ -125,7 +131,6 @@ export default function App() {
       />
 
       <Gallery />
-
     </div>
   );
 }

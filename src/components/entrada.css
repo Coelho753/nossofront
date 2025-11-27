@@ -1,0 +1,46 @@
+.entrada-container {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #4a0000, #7a0000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: black;
+}
+
+.entrada-box {
+  background: #fff8b5;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 18px 28px rgba(0,0,0,0.35);
+}
+
+.btn-area {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+}
+
+.btn-sim {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  background: #28c76f;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.btn-nao {
+  position: absolute;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  background: #ff4d4d;
+  cursor: pointer;
+  transition: 0.2s;
+}
